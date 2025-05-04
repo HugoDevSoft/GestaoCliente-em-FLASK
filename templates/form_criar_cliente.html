@@ -1,0 +1,20 @@
+<form class="c-form" 
+
+action="{{ url_for('cliente.add_cliente') }}" 
+method="POST"
+c-append="#lista-clientes">
+
+    <div class="mb-3">
+        <label class="form-label">Nome</label>
+        <input type="text" class="form-control" name="nome">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">E-mail</label>
+        <input type="email" class="form-control" name="e-mail">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Adicionar Cliente</button>
+</form>
