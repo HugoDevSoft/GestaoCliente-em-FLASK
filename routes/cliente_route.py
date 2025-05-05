@@ -16,16 +16,13 @@ def add_cliente():
     novo_usuario = { 
         "id": len(CLIENTES) + 1,
         "nome": data['nome'],
-        "email": data['e-mail'],
+        "email": data['email'],
     }
     
     CLIENTES.append(novo_usuario)
     
     return render_template('item_cliente.html', cliente=novo_usuario)
-    
-    
-    
-
+       
 @cliente_route.route('/new') 
 def form_criar_cliente():
     """formulario para cadastrar novo cliente"""
@@ -33,26 +30,58 @@ def form_criar_cliente():
    
 @cliente_route.route('/<int:cliente_id>')  
 def dados_do_cliente(cliente_id):
-    """obter os dados de um cliente especifico atraves do id. """
-    return render_template('dados_do_cliente.html')
+    """Obter os dados de um cliente específico através do id."""
+    
+    cliente = list(filter(lambda c: c['id'] == cliente_id, CLIENTES))[0]
+    return render_template('dados_do_cliente.html', cliente=cliente)
+
+#@cliente_route.route('/<int:cliente_id>')
+#def dados_do_cliente(cliente_id):
+    """Obter os dados de um cliente específico através do id."""
+    
+    cliente = next((c for c in CLIENTES if c['id'] == cliente_id), None)
+    
+
+    return render_template('dados_do_cliente.html', cliente=cliente)
+
+
 
 @cliente_route.route('/<int:cliente_id>/edit')  
-def editar_cliente(cliente_id):
+def form_editar_cliente(cliente_id):
     """renderizar um formulario para editar um cliente já existente"""
-    pass
-
-@cliente_route.route('/clientes/<int:cliente_id>/uptade', methods=['PUT'])  
+    
+    cliente = {}
+   
+    for c in CLIENTES:
+        if c['id'] == cliente_id:
+            cliente = c
+    return render_template('form_criar_cliente.html', cliente=cliente)
+    
+@cliente_route.route('/<int:cliente_id>/uptade', methods=['PUT'])  
 def atualiza_cliente(cliente_id):
     """atualiza os dados do cliente"""
-    pass
+    # obter dados do formulário de edição
+    data = request.json
+    
+    cliente_editado = {}
+    # obter usuario pelo id
+    for c in CLIENTES:
+        if c['id'] == cliente_id:
+            c['nome'] = data['nome']
+            c['email'] = data['email']
+            
+            cliente_editado = c
+    # editar usuario
+    return render_template('item_cliente.html', cliente=cliente_editado)
+    
+    
+    
 
-@cliente_route.route('/clientes/<int:cliente_id>/delete ', methods=['DELETE'])  
+@cliente_route.route('/<int:cliente_id>/delete ', methods=['DELETE'])  
 def deleta_cliente(cliente_id):
     """atualiza os dados do cliente"""
-    
     global CLIENTES    
     CLIENTES = [ c for c in CLIENTES if c['id'] != cliente_id]
-    
     return {'delete': 'ok'}
     
 

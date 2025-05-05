@@ -34,3 +34,13 @@
 </body>
 
 </html>
+
+{% if cliente %} 
+    action="{{ url_for('cliente.atualiza_cliente', cliente_id=cliente.id) }}" 
+    {% else %}
+    action="{{ url_for('cliente.add_cliente') }}" 
+    {% endif %} 
+
+    method="{% if cliente %} PUT {%else %} POST {% endif %}"
+    
+    c-append="#lista-clientes">
