@@ -37,3 +37,5 @@ Autenticação e Autorização:** Implementar um sistema de login e controle de 
 Hugo Gonçalves
 
 Sinta-se à vontade para contribuir e expandir este meu projeto sou um aluno em constante evolução!
+![image](https://github.com/user-attachments/assets/19315c4b-a961-4159-a030-11aeaa2f4f52)
+
