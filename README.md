@@ -1,4 +1,4 @@
-# GestaoCliente-em-FLASK e padrões RESTful 
+# GestaoCliente-em-FLASK 
 
 Este é um projeto simples de gestão de clientes desenvolvido utilizando o framework Flask (Python). Ele permite listar, adicionar, visualizar, editar e deletar clientes, com os dados armazenados temporariamente em memória.
 
