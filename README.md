@@ -37,5 +37,15 @@ Autenticação e Autorização: Implementar um sistema de login e controle de ac
 Hugo Gonçalves
 
 Sinta-se à vontade para contribuir e expandir este meu projeto sou um aluno em constante evolução!
-![image](https://github.com/user-attachments/assets/19315c4b-a961-4159-a030-11aeaa2f4f52)
+![image](https://github.com/user-attachments/assets/e5ed96b1-d13b-4fb7-beb6-059f1d06cad4)
+
+
+![image](https://github.com/user-attachments/assets/7a9b4cb6-6b0e-4dee-a2c1-6d8e10732206)
+
+
+![image](https://github.com/user-attachments/assets/d16d6204-6431-411a-a4a8-d78690477abb)
+
+
+
+
 
