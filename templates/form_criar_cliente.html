@@ -10,7 +10,10 @@
         {% if cliente %} 
             c-swap="#cliente-{{cliente.id}}"
         {% else %} 
-            c-append="#lista-clientes" {% endif %}>
+            c-append="#lista-clientes" 
+        {% endif %}
+        
+        c-reload-container="true">
 
     <div class="mb-3">
         <label class="form-label">Nome</label>
