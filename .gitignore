@@ -1,0 +1,40 @@
+# Arquivos Python compilados
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ambientes virtuais
+venv/
+env/
+ENV/
+.venv
+
+# Banco de dados SQLite (antigo, agora usamos MySQL)
+*.db
+*.sqlite
+*.sqlite3
+
+# Arquivos temporários
+tempCodeRunnerFile.py
+*.tmp
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
+
+# Variáveis de ambiente (se você criar um arquivo .env)
+.env
+.env.local
+
+# Arquivos de backup
+*.bak
+*~
+
