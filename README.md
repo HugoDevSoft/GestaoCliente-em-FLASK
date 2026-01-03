@@ -74,6 +74,9 @@ O projeto segue os princípios SOLID:
 └── main.py                    # Aplicação Flask
 ```
 
+<img width="302" height="787" alt="image" src="https://github.com/user-attachments/assets/8f8335d5-ed67-4175-86e3-4fbb97e3459c" />
+
+
 ##(( Próximos Passos e Melhorias ))##
 
 Este projeto pode ser expandido com diversas melhorias, como:
